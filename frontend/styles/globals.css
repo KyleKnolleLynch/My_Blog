@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Futura';
+    src: url('../public/fonts/futura/FuturaPTBook.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Futura';
+    src: url('../public/fonts/futura/FuturaPTBookOblique.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Futura';
+    src: url('../public/fonts/futura/FuturaPTMedium.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Futura';
+    src: url('../public/fonts/futura/FuturaPTMediumOblique.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Futura';
+    src: url('../public/fonts/futura/FuturaPTBold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Futura';
+    src: url('../public/fonts/futura/FuturaPTBoldOblique.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Electra';
+    src: url('../public/fonts/electra/ElectraLTStd-Regular.woff2')
+      format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+}
