@@ -22,7 +22,7 @@ const Hero = ({ home }) => {
           <p className='text-xl text-gray-100 mb-6 md:text-2xl'>
             {home.description}
           </p>
-          <SocialIcons color='text-white' hoverColor='text-gray-300' />
+          <SocialIcons color='text-white' hoverColor='text-gray-400' />
         </div>
       </div>
     </div>

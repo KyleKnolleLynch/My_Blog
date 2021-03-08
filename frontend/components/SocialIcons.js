@@ -6,14 +6,14 @@ const SocialIcons = ({ color, hoverColor }) => {
       <a
         href='https://github.com/KyleKnolleLynch'
         target='none'
-        className={`hover:${hoverColor} transition-colors`}
+        className={`hover:${hoverColor} transition-colors duration-500`}
       >
         <FaGithub />
       </a>
       <a
         href='https://codepen.io/KyleKnolleLynch'
         target='none'
-        className={`hover:${hoverColor} transition-colors`}
+        className={`hover:${hoverColor} transition-colors duration-500`}
       >
         <FaCodepen />
       </a>
