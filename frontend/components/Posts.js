@@ -2,13 +2,10 @@ import Link from 'next/link'
 
 const Posts = ({ posts }) => {
   return (
-    <div className='flex flex-col md:pl-16 md:w-3/4 lg:w-3/5'>
+    <div className='flex flex-col divide-y-2 divide-red-700 md:pl-16 md:w-3/4 lg:w-3/5'>
       {posts &&
         posts.map(post => (
-          <div
-            key={post.slug.current}
-            className='py-12 border-red-700 border-b-2'
-          >
+          <div key={post.slug.current} className='py-12'>
             <div className='text-gray-400 text-sm font-bold pb-6 flex space-x-4'>
               {post.categories.map(category => (
                 <span key={category}>{category}</span>

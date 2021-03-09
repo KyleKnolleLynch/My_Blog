@@ -2,7 +2,7 @@ import { FaCodepen, FaGithub } from 'react-icons/fa'
 
 const SocialIcons = ({ color, hoverColor }) => {
   return (
-    <div className={`${color} text-3xl flex space-x-4 lg:text-4xl`}>
+    <div className={`${color} text-3xl flex space-x-4`}>
       <a
         href='https://github.com/KyleKnolleLynch'
         target='none'

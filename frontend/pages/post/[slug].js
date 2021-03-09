@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
 import BlockContent from '@sanity/block-content-to-react'
+import Navbar from '../../components/Navbar'
 
 const builder = imageUrlBuilder(client)
 
@@ -27,10 +28,8 @@ export const getStaticProps = async ({ params }) => {
       'author': author->name
     }
   `
-
   const data = await client.fetch(query)
 
-  console.log(data)
   return {
     revalidate: 60 * 60 * 24,
     props: {
@@ -41,8 +40,6 @@ export const getStaticProps = async ({ params }) => {
 
 const SinglePost = ({ post }) => {
   const router = useRouter()
-
-  console.log(post)
 
   if (router.isFallback) {
     return <h1>Loading...</h1>
@@ -60,22 +57,27 @@ const SinglePost = ({ post }) => {
   }
 
   return (
-    <div className='bg-gray-300 antialiased'>
-      <div className='max-w-screen-2xl min-h-screen mx-auto bg-white'>
-        <div className='px-4 max-w-2xl mx-auto'>
-          <h1 className='text-4xl font-bold text-gray-900 pt-12 pb-8 lg:text-5xl'>
-            {post.title}
-          </h1>
+    <div className='px-4 max-w-2xl mx-auto'>
+      <h1 className='text-4xl font-bold text-gray-900 pt-12 pb-8 lg:text-5xl'>
+        {post.title}
+      </h1>
 
-          <div className='flex space-x-5 text-sm text-gray-500 pb-4 pl-0.5'>
-            <span className='text-red-700'>{post.author}</span>
-            <span>{new Date(post.publishedAt).toDateString()}</span>
-          </div>
-          <Image width={800} height={500} src={urlFor(post.mainImage).url()} />
-          <div className='prose max-w-2xl pb-16'>
-            <BlockContent blocks={post.body} />
-          </div>
-        </div>
+      <div className='text-sm text-gray-500 pb-4 pl-0.5'>
+        <p className='block'>
+          By <span className='text-red-700'>{post.author}</span>
+        </p>
+        <span className='block'>
+          {new Date(post.publishedAt).toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </span>
+      </div>
+      <Image width={800} height={500} src={urlFor(post.mainImage).url()} />
+      <div className='prose prose-sm max-w-2xl py-16 sm:prose'>
+        <BlockContent blocks={post.body} />
       </div>
     </div>
   )
