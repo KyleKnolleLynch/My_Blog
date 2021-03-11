@@ -46,7 +46,7 @@ const SinglePost = ({ post }) => {
     return <Loader />
   }
 
-  if (!post) {
+  if (!post.slug) {
     return <NotFound />
   }
 
