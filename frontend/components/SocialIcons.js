@@ -9,6 +9,7 @@ const SocialIcons = ({ color, hoverColor }) => {
         className={`hover:${hoverColor} transition-colors duration-500`}
       >
         <FaGithub />
+        <span className='sr-only'>Visit my Github</span>
       </a>
       <a
         href='https://codepen.io/KyleKnolleLynch'
@@ -16,6 +17,7 @@ const SocialIcons = ({ color, hoverColor }) => {
         className={`hover:${hoverColor} transition-colors duration-500`}
       >
         <FaCodepen />
+        <span className='sr-only'>Visit my Codepen</span>
       </a>
     </div>
   )

@@ -15,6 +15,7 @@ const Hero = ({ home }) => {
         <Image
           layout='fill'
           src={urlFor(home.mainImage).url()}
+          alt='kylesblog background hero'
           className='absolute object-cover'
         />
         <div className='absolute h-full w-full text-white flex flex-col justify-end pb-14 px-6 z-20 sm:px-12 lg:px-28'>

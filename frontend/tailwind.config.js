@@ -11,6 +11,17 @@ module.exports = {
         128: '32rem',
         144: '36rem',
       },
+      keyframes: {
+        bouncer: {
+          '0%': { transform: 'translateY(0)' },
+
+          '100%': { transform: 'translateY(-100px)' },
+        },
+      },
+      animation: {
+        bouncer:
+          'bouncer 0.6s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate',
+      },
     },
   },
   variants: {

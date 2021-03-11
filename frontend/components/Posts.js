@@ -6,7 +6,7 @@ const Posts = ({ posts }) => {
       {posts &&
         posts.map(post => (
           <div key={post.slug.current} className='py-12'>
-            <div className='text-gray-400 text-sm font-bold pb-6 flex space-x-4'>
+            <div className='text-gray-500 text-sm font-bold pb-6 flex space-x-4'>
               {post.categories.map(category => (
                 <span key={category}>{category}</span>
               ))}
